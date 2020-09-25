@@ -1,4 +1,4 @@
-9. a) 7
+9. a) 8
    b) Jan 24 2017
    c) git log shows the history of commits in a project and allows you to search
       for changes, where git status allows you to view current details of the working directory
@@ -11,4 +11,3 @@
    f) You will get an error and warning to commit changes or delete them. You can 
       use stash to save the changes to apply later.
 
-      
