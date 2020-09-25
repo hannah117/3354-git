@@ -7,15 +7,19 @@ public class Main {
             int result = addArguments(args);
             System.out.println(result);
         } catch (Exception e) {
-            if(args[0].matches(".*[1-9].*") != true ||args[1].matches(".*[1-9].*") != true || args[2].matches(".*[1-9].*") != true){
+            if(args[0].contains("[a-zA-Z]+")!=false ||args[1].contains("[a-zA-Z]+")!=false ||args[2].contains("[a-zA-Z]+")!=false){
                 throw new IllegalArgumentException("Input must be integers");
             }
-            System.err.println("Please provide three integers to add");
+            if(args[0] == null ||args[1] == null ||args[2] == null )
+            {
+                throw new IllegalArgumentException("Must have 3 inputs");
+            }
+         
         }}
 
     private static int addArguments(String[] args) {
-        if (args[0] == "-")
-        {
+        if (args[0].equals("-"))
+        { 
             return (Integer.valueOf(args[1])*-1) + (Integer.valueOf(args[2])*-1) ;
         }
         return Integer.valueOf(args[0]) + Integer.valueOf(args[1]) + Integer.valueOf(args[2]);
