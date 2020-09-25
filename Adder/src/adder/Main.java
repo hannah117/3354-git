@@ -1,4 +1,4 @@
-//package adder;
+package adder;
 
 public class Main {
 
